@@ -1,0 +1,136 @@
+:root {
+  --color-primary: #364f6b;
+  --color-secondary: #426185;
+  --color-light: #fff;
+  --font: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-family: var(--font);
+  letter-spacing: 1px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.seacrh-container {
+  margin-top: 20px;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.search {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+
+.search:focus {
+  outline-style: dotted;
+  outline-color: var(--color-secondary);
+}
+
+.post {
+  position: relative;
+  background-color: var(--color-secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 40px 0;
+  display: flex;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.post .post-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.post .post-body {
+  margin: 15px 0 0;
+  font-weight: 300;
+}
+
+.post .post-info {
+  margin-left: 20px;
+}
+
+.post .number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-light);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 10px;
+}
+
+.loader {
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.loader .circle {
+  display: block;
+  background-color: var(--color-light);
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}

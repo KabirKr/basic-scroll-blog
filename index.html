@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll Blog</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Scrolling Blog</h1>
+    <div class="seacrh-container">
+      <input
+        type="text"
+        name="search"
+        id="js-search"
+        class="search"
+        placeholder="Search posts..."
+      />
+    </div>
+
+    <div id="js-post-container"></div>
+
+    <div class="loader">
+      <span class="circle"></span>
+      <span class="circle"></span>
+      <span class="circle"></span>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
